@@ -1,0 +1,57 @@
+[
+    
+    {
+        "title": "The Social Network",
+        "releaseYear": 2010, 
+        "director": "David Fincher",
+        "genre": "Drama", 
+        "bianscore": 9,
+        "brentscore": 8,
+        "url": "/the-social-network"
+    },
+    {
+        "title": "Catch Me If You Can",
+        "releaseYear": 2002,
+        "director": "Steven Spielberg", 
+        "genre": "Drama/Crime",
+        "bianscore": 8,
+        "brentscore": 8.5,
+        "url": "/catch-me-if-you-can"
+    }, 
+    {
+        "title": "Brad's Status",
+        "releaseYear": 2017, 
+        "director": "Mike White",
+        "genre": "Drama",
+        "bianscore": 9,
+        "brentscore": 6,
+        "url": "/brads-status"
+    },
+    {
+        "title": "Tenet",
+        "releaseYear": 2020,
+        "director": "Christopher Nolan",
+        "genre": "Action/Sci-fi",
+        "bianscore": 3,
+        "brentscore": 7,
+        "url": "/tenet"
+    }, 
+    {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "releaseYear": 2004,
+        "genre": "Romance", 
+        "director": "Michel Gondry",
+        "bianscore": 9,
+        "brentscore": 6,
+        "url": "eternal-sunshine-of-the-spotless-mind"
+    },
+    {
+        "title": "The Conjuring",
+        "releaseYear": 2020,
+        "genre": "Horror", 
+        "director": "James Wan",
+        "bianscore": 3,
+        "brentscore": 7,
+        "url": "the-conjuring"
+    }
+]
