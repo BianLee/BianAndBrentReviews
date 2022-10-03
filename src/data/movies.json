@@ -7,7 +7,7 @@
         "genre": "Drama", 
         "bianscore": 9,
         "brentscore": 8,
-        "url": "/the-social-network"
+        "url": "the-social-network"
     },
     {
         "title": "Catch Me If You Can",
@@ -16,7 +16,7 @@
         "genre": "Drama/Crime",
         "bianscore": 8,
         "brentscore": 8.5,
-        "url": "/catch-me-if-you-can"
+        "url": "catch-me-if-you-can"
     }, 
     {
         "title": "Brad's Status",

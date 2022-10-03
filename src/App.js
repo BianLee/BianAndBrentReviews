@@ -9,9 +9,18 @@ export default class App extends React.Component {
 
   constructor() {
     super();
-  
+    this.handleSearch = this.handleSearch.bind(this);
+    this.state = {
+      searchQuery: ""
+    }
   }
 
+  handleSearch(e) {
+    console.log(e.target.value);
+    this.setState({
+      searchQuery: e.target.value 
+    })
+  }
 
  
 
@@ -57,15 +66,16 @@ export default class App extends React.Component {
             </nav>
             <main>
               <div style={{background: 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("img/front.jpg") no-repeat center', backgroundSize: 'cover'}} className="py-40 px-8 text-center relative text-white font-bold text-2xl md:text-3xl overflow-auto">
-                <h2 className="mx-auto mb-8 font-bold text-white text-3xl md:text-4xl" style={{fontFamily: "Josefin Sans"}}>Bian and Brent Reviews</h2> 
+                <h1 className="mx-auto mb-8 font-bold text-white text-3xl md:text-4xl" style={{fontFamily: "Josefin Sans"}}><span style={{color: "#FFD700", fontFamily: "Josefin Sans"}}>Bian</span> and <span style={{color: "#f8b8ff", fontFamily: "Josefin Sans"}}>Brent</span> Reviews</h1> 
                 <div className="w-11/12 md:w-3/4 lg:max-w-3xl m-auto">
-                  <div className="relative z-30 text-base text-black" style={{fontFamily: "Josefin Sans"}}><input style={{background: "#ede9e8", color: "black"}}type="text" defaultValue placeholder="Search movies, albums or books" className="mt-2 focus:outline-none rounded py-2 
+                  <div className="relative z-30 text-base text-black" style={{fontFamily: "Josefin Sans"}}><input onChange={(e)  => this.handleSearch(e)} style={{background: "#ede9e8", color: "black"}}type="text" placeholder="Search movies, albums or books" className="mt-2 focus:outline-none rounded py-2 
                         px-4 block w-full" /></div>
                 </div>
               </div>
+              {/* 
               <div className="bg-gray-50">
                 <div className="w-11/12 lg:w-10/12 xl:w-1024 m-auto">
-                  {/*
+                  
                   <div className="py-8 md:py-16 md:flex md:space-x-8">
                     <div className="md:w-7/12">
                       <div className="font-bold text-3xl">Choosing a dorm just got easier</div>
@@ -90,11 +100,12 @@ export default class App extends React.Component {
                     </div>
                     <div className="md:w-5/12 mt-8 md:mt-0 mx-auto"><img className="mx-auto shadow-xl rounded-xl" src="/review-form.png" alt="review-form" /></div>
                   </div>
-                  */}
+                  
                 </div>
               </div>
+            */}
               <div className="my-8 md:my-16 w-11/12 lg:w-10/12 xl:w-1024 m-auto">
-                <div className="font-bold text-2xl text-center my-8" style={{fontFamily: "Josefin Sans"}}>Latest Movie Reviews</div>
+                {/* <div className="font-bold text-2xl text-center my-8" style={{fontFamily: "Josefin Sans"}}>Latest Movie Reviews</div> */}
                 <div className="flex flex-wrap">
                     {movies.map((movie) => {
                     var cardColor;
@@ -120,10 +131,13 @@ export default class App extends React.Component {
                       cardFontColor = "#403e3e"; 
                     }
 
+                    cardColor = "#e4ebf5"; 
+                    cardFontColor = "#053375"; 
+
                     return (
                       <>
-                        <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
-                          <a href={movie.url}>
+                        <NavLink to={"/films/" + movie.url} className="p-2 w-full sm:w-1/2 lg:w-1/3">
+                          
                             <div className="overflow-hidden rounded-lg shadow-lg" style={{backgroundColor: cardColor}}>
                               {/* <img src=""alt="dorm" /> */}
                               <div className="p-4">
@@ -140,8 +154,8 @@ export default class App extends React.Component {
                                 </div>
                               </div>
                             </div>
-                          </a>
-                        </div>
+                  
+                        </NavLink>
                       </>
                     )
                   })}
