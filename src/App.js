@@ -104,12 +104,21 @@ export default class App extends React.Component {
                 </div>
               </div>
             */}
-              <div className="my-8 md:my-16 w-11/12 lg:w-10/12 xl:w-1024 m-auto">
+              <div className="my-8 md:my-16 w-11/12 lg:w-10/12 xl:w-1024 m-auto" style={{marginTop: "35px"}}>
                 {/* <div className="font-bold text-2xl text-center my-8" style={{fontFamily: "Josefin Sans"}}>Latest Movie Reviews</div> */}
                 <div className="flex flex-wrap">
-                    {movies.map((movie) => {
+                    {movies.map((movie, i) => {
                     var cardColor;
                     var cardFontColor; 
+                    if (i % 2 == 0) {
+                      cardColor = "#ebf5ef";
+                      cardFontColor = "#3e5949"; 
+                    }
+                    else {
+                      cardColor = "#e4ebf5"; 
+                      cardFontColor = "#053375"; 
+                    }
+                    /* 
                     if (movie.genre == "Drama") {
                       cardColor = "#ebf5ef";
                       cardFontColor = "#3e5949"; 
@@ -131,8 +140,9 @@ export default class App extends React.Component {
                       cardFontColor = "#403e3e"; 
                     }
 
-                    cardColor = "#e4ebf5"; 
-                    cardFontColor = "#053375"; 
+                    // cardColor = "#e4ebf5"; 
+                    // cardFontColor = "#053375"; 
+                    */ 
 
                     return (
                       <>
